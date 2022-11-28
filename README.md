@@ -1,7 +1,46 @@
-# Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# TODO LIST APPLICATION 
 
-## Recommended IDE Setup
+> A Todo List Application that allows a user to add an item, delete an item and clear a list of completed items. 
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## Built With
+- Vite (Building tool)
+- VueJS
+- CSS
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+Basic knowlwedge of computers, git and an editor most prefarably visual studio code.
+- Vue
+- JavaScript
+
+### Setup
+- Navigate to the directory in your local computer where you want this project to be.
+- Once inside open the terminal in that directory and clone the project using the command `git clone https://github.com/AbbyNyakara/TodoListVueSubmission.git`
+
+### Install
+- When the clone is complete change the current working directory to the app with the command `cd TodoListVueSubmission`
+- Then open it VsCode by running ==> code .
+- Install the Node Modules by running: `npm install`
+- To open the application on the Browser, run the command: `npm run dev`
+
+## Author
+
+👤 **Abby**
+
+- GitHub: [@AbbyNyakara](https://github.com/AbbyNyakara)
+- LinkedIn: [Abigael Nyakara](https://www.linkedin.com/in/abigail-nyakara/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/AbbyNyakara/TodoListVueSubmission/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
