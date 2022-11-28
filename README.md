@@ -3,6 +3,9 @@
 
 > A Todo List Application that allows a user to add an item, delete an item and clear a list of completed items. 
 
+## SCREENSHOTS 
+![image](https://user-images.githubusercontent.com/81410040/204223519-7c5ef4bf-006c-4e5e-846f-b376317efa19.png)
+
 ## Built With
 - Vite (Building tool)
 - VueJS
