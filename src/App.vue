@@ -3,7 +3,7 @@
     <div class="app">
       <div class="app__header">
         <h1 class="app__title">Todo</h1>
-        <img src="./assets/images/ICON-SUN.SVG" alt="">
+        <!-- <img src="./assets/images/ICON-SUN.SVG" alt=""> -->
       </div>
       <TodoList />
       <Footer />
