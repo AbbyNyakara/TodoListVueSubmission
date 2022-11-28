@@ -5,8 +5,7 @@
         <div class="todo_item-todo" :class="{completed : completed}">{{item}}</div>
       </div>
       <div class="delete_todo" @click="deleteTodo(index)">
-        <!-- <img src="../assets/images/ICON-CROSS.SVG" alt="cross icon"> -->
-        &times;
+        <img src="../assets/images/icon-cross.svg" alt="cross icon">
       </div>
   </div>
 </template>
