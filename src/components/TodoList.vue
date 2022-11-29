@@ -4,7 +4,6 @@
       <input type="text" placeholder="Create a new todo" class="todo_input"
       v-model="newTodo" @keyup.enter="addTodo">
     </div>
-    
     <div class="todo_items">
       <TodoItem v-for="(todo, index) in filteredTodos" :key="todo.id" class="todo_item"
        :todo="todo" :index="index" @deletedTodo="deleteTodo" @markCompleted="markCompleted">
@@ -26,91 +25,91 @@
         </div>
       </div>
     </div>
-    
   </div>
 </template>
 
 <script>
-  import TodoItem from './TodoItem.vue'
+import TodoItem from './TodoItem.vue';
 
-  export default {
-    name: "TodoList",
-    components: {
-      TodoItem
-    },
-    data () {
-      return {
-        newTodo: "",
-        idForTodo: 5,
-        filter: "all",
-        todos: [
-          {
-            item: "Complete online JavaScript course",
-            completed: false,
-            id: 1,
-          },
-          {
-            item: "Jog around the park 3x",
-            completed: false,
-            id: 2,
-          },
-          {
-            item: "10 minutes meditation",
-            completed: false,
-            id: 3,
-          },
-          {
-            item: "Read for 1 hour",
-            completed: false,
-            id: 4,
-          }
-        ]
+export default {
+  name: 'TodoList',
+  components: {
+    TodoItem,
+  },
+  data() {
+    return {
+      newTodo: '',
+      idForTodo: 5,
+      filter: 'all',
+      todos: [
+        {
+          item: 'Complete online JavaScript course',
+          completed: false,
+          id: 1,
+        },
+        {
+          item: 'Jog around the park 3x',
+          completed: false,
+          id: 2,
+        },
+        {
+          item: '10 minutes meditation',
+          completed: false,
+          id: 3,
+        },
+        {
+          item: 'Read for 1 hour',
+          completed: false,
+          id: 4,
+        },
+      ],
+    };
+  },
+  methods: {
+    addTodo() {
+      if (this.newTodo.trim().length === 0) {
+        // alert('Todo Item cannot be empty');
+        return;
       }
+
+      this.todos.push({
+        id: this.idForTodo,
+        item: this.newTodo,
+        completed: false,
+      });
+
+      this.newTodo = '';
+      // eslint-disable-next-line no-plusplus
+      this.idForTodo++;
     },
-    methods: {
-      addTodo() {
-        if (this.newTodo.trim().length == 0) {
-          alert("Todo Item cannot be empty")
-          return
-        }
 
-        this.todos.push({
-          id: this.idForTodo,
-          item: this.newTodo,
-          completed: false
-        })
-
-        this.newTodo = ""
-        this.idForTodo++
-      },
-
-      deleteTodo(index) {
-        this.todos.splice(index, 1)
-      },
-      deleteCompleted() {
-        this.todos = this.todos.filter(todo => !todo.completed)
-      }, 
-      markCompleted(data) {
-        this.todos.splice(data.index, 1, data.todo)
-      }
+    deleteTodo(index) {
+      this.todos.splice(index, 1);
     },
-    computed: {
-      itemsLeft() {
-        return this.todos.filter(todo => !todo.completed).length
-      },
-      filteredTodos() {
-        if (this.filter == "all") {
-          return this.todos
-        } else if (this.filter == "active"){
-          return this.todos.filter(todo => !todo.completed)
-        }else if (this.filter == "completed"){
-          return this.todos.filter(todo => todo.completed)
-        }
-
-        return this.todos
+    deleteCompleted() {
+      this.todos = this.todos.filter((todo) => !todo.completed);
+    },
+    markCompleted(data) {
+      this.todos.splice(data.index, 1, data.todo);
+    },
+  },
+  computed: {
+    itemsLeft() {
+      return this.todos.filter((todo) => !todo.completed).length;
+    },
+    filteredTodos() {
+      if (this.filter === 'all') {
+        return this.todos;
+      } if (this.filter === 'active') {
+        return this.todos.filter((todo) => !todo.completed);
+      } if (this.filter === 'completed') {
+        return this.todos.filter((todo) => todo.completed);
       }
-    }
-  }
+
+      return this.todos;
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -159,7 +158,7 @@
   }
 
   .filters> p {
-    cursor: pointer; 
+    cursor: pointer;
     font-size: 14px;
     background-color: hsl(235, 24%, 19%);
     appearance: none;

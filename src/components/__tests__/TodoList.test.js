@@ -1,13 +1,16 @@
-import { mount } from "@vue/test-utils";
-import { expect, test, describe, it } from 'vitest'
-import TodoList from '../../components/TodoList.vue'
+/* eslint-disable no-unused-vars */
+import { mount } from '@vue/test-utils';
+import {
+  expect, test, describe, it,
+} from 'vitest';
 import Vue from 'vue';
+import TodoList from '../TodoList.vue';
 
-describe("My Todolist component", ()=> {
-  it('Should render component', ()=> {
+describe('My Todolist component', () => {
+  it('Should render component', () => {
     const wrapper = mount(TodoList);
     expect(wrapper.html()).toMatchSnapshot();
-  })
+  });
 
   // it ("Should delete a todo item from array", ()=> {
   //   function deleteTodo(index){
@@ -25,6 +28,4 @@ describe("My Todolist component", ()=> {
   //      array.deleteTodo(1);
   //     expect(array.length).toBe(0);
   // })
-})
-
-
+});
