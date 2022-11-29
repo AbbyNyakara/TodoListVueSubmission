@@ -48,7 +48,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 0.3px solid  hsl(233, 14%, 35%);
     cursor: pointer;
   }
 

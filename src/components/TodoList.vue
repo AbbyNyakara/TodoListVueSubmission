@@ -169,7 +169,7 @@
   }
 
   .active {
-    color: hsl(280, 87%, 65%);
+    color: hsl(192, 100%, 67%);
   }
 
   .clear_btn {
