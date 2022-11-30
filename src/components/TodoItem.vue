@@ -75,4 +75,10 @@ export default {
     color: grey;
   }
 
+  @media screen and (max-width: 500px) {
+    .todo_item {
+      font-size: 0.85rem;
+    }
+  }
+
 </style>

@@ -14,7 +14,7 @@
           <div>{{itemsLeft}} items left</div>
         </div>
 
-        <div class="filters">
+        <div class="filters-desktop">
           <p :class="{ active : filter == 'all' }"  @click="filter='all'">All</p>
           <p  :class="{ active : filter == 'active' }"  @click="filter='active'">Active</p>
           <p  :class="{ active : filter == 'completed' }"  @click="filter='completed'">Completed</p>
@@ -25,6 +25,12 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="filter_mobile">
+     <p :class="{ active : filter == 'all' }"  @click="filter='all'">All</p>
+     <p  :class="{ active : filter == 'active' }"  @click="filter='active'">Active</p>
+     <p  :class="{ active : filter == 'completed' }"  @click="filter='completed'">Completed</p>
   </div>
 </template>
 
@@ -153,11 +159,11 @@ export default {
     justify-content: space-between;
   }
 
-  .filters {
+  .filters-desktop {
     display: flex;
   }
 
-  .filters> p {
+  .filters-desktop> p {
     cursor: pointer;
     font-size: 14px;
     background-color: hsl(235, 24%, 19%);
@@ -177,6 +183,34 @@ export default {
     background: transparent;
     color: #fff;
     cursor: pointer;
+  }
+
+  .filter_mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 375px){
+    .filter_mobile {
+      display: flex;
+      background-color: hsl(235, 24%, 19%);
+      margin-top: 1rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .filter_mobile> p {
+    cursor: pointer;
+    /* color: hsl(234, 39%, 85%); */
+    }
+
+    .filters-desktop {
+      display: none;
+    }
   }
 
 </style>
