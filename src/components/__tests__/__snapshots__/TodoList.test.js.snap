@@ -2,8 +2,8 @@
 
 exports[`My Todolist component > Should render component 1`] = `
 "<div class=\\"todo_list\\" data-v-4afa86a5=\\"\\">
-  <div class=\\"input__section\\" data-v-4afa86a5=\\"\\"><input type=\\"text\\" placeholder=\\"Create a new todo\\" class=\\"todo_input\\" data-v-4afa86a5=\\"\\"></div>
-  <div class=\\"todo_items\\" data-v-4afa86a5=\\"\\">
+  <div class=\\"input__section\\" data-v-4afa86a5=\\"\\"><input type=\\"text\\" placeholder=\\"Create a new todo\\" class=\\"todo_input-dark\\" data-v-4afa86a5=\\"\\"></div>
+  <div class=\\"todo_items-dark\\" data-v-4afa86a5=\\"\\">
     <div class=\\"todo_item\\" data-v-971ec5b0=\\"\\" data-v-4afa86a5=\\"\\">
       <div class=\\"todo_label\\" data-v-971ec5b0=\\"\\"><input type=\\"checkbox\\" class=\\"checkbox\\" data-v-971ec5b0=\\"\\">
         <div class=\\"todo_item-todo\\" data-v-971ec5b0=\\"\\">Complete online JavaScript course</div>
@@ -32,13 +32,18 @@ exports[`My Todolist component > Should render component 1`] = `
       <div class=\\"items_left\\" data-v-4afa86a5=\\"\\">
         <div data-v-4afa86a5=\\"\\">4 items left</div>
       </div>
-      <div class=\\"filters\\" data-v-4afa86a5=\\"\\">
+      <div class=\\"filters-desktop\\" data-v-4afa86a5=\\"\\">
         <p class=\\"active\\" data-v-4afa86a5=\\"\\">All</p>
         <p class=\\"\\" data-v-4afa86a5=\\"\\">Active</p>
         <p class=\\"\\" data-v-4afa86a5=\\"\\">Completed</p>
       </div>
-      <div class=\\"clear_completed\\" data-v-4afa86a5=\\"\\"><button class=\\"clear_btn\\" data-v-4afa86a5=\\"\\">Clear Completed</button></div>
+      <div class=\\"clear_completed\\" data-v-4afa86a5=\\"\\"><button class=\\"clear_btn-dark\\" data-v-4afa86a5=\\"\\"> Clear Completed</button></div>
     </div>
   </div>
+</div>
+<div class=\\"filter_mobile\\" data-v-4afa86a5=\\"\\">
+  <p class=\\"active\\" data-v-4afa86a5=\\"\\">All</p>
+  <p class=\\"\\" data-v-4afa86a5=\\"\\">Active</p>
+  <p class=\\"\\" data-v-4afa86a5=\\"\\">Completed</p>
 </div>"
 `;
