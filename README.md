@@ -9,15 +9,19 @@
 
 ## SCREENSHOTS 
 - Dark mode Desktop View
+<br/>
 ![image](https://user-images.githubusercontent.com/81410040/204719161-5dad26e4-03c8-42bc-ab13-12e3797a0665.png)
 
 - Light Mode Desktop View
+<br/>
 ![image](https://user-images.githubusercontent.com/81410040/204719258-d29d93e0-be54-478f-a7c2-bd3b96718955.png)
 
 - Dark Mode mobile View
+<br/>
 ![image](https://user-images.githubusercontent.com/81410040/204719462-4c5a8ce0-7cc3-49c6-8c37-683b0ece08ff.png)
 
 - Light mode Mobile View
+<br/>
 ![image](https://user-images.githubusercontent.com/81410040/204719360-1d707f6a-7dad-4bf6-b2ad-e5855c99f3df.png)
 
 
@@ -29,6 +33,7 @@
 - Vite (Building tool)
 - VueJS
 - CSS
+- Vitest(App Testing)
 
 ## Getting Started
 
