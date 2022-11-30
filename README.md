@@ -3,8 +3,23 @@
 
 > A Todo List Application that allows a user to add an item, delete an item and clear a list of completed items. 
 
+## LINKS
+- [Github Repository](https://github.com/AbbyNyakara/TodoListVueSubmission)
+- [Live Site](https://todo-list-vue-submission.vercel.app/)
+
 ## SCREENSHOTS 
-![image](https://user-images.githubusercontent.com/81410040/204223519-7c5ef4bf-006c-4e5e-846f-b376317efa19.png)
+- Dark mode Desktop View
+![image](https://user-images.githubusercontent.com/81410040/204719161-5dad26e4-03c8-42bc-ab13-12e3797a0665.png)
+
+- Light Mode Desktop View
+![image](https://user-images.githubusercontent.com/81410040/204719258-d29d93e0-be54-478f-a7c2-bd3b96718955.png)
+
+- Dark Mode mobile View
+![image](https://user-images.githubusercontent.com/81410040/204719462-4c5a8ce0-7cc3-49c6-8c37-683b0ece08ff.png)
+
+- Light mode Mobile View
+![image](https://user-images.githubusercontent.com/81410040/204719360-1d707f6a-7dad-4bf6-b2ad-e5855c99f3df.png)
+
 
 ## Links 
 - [Github Repository](https://github.com/AbbyNyakara/TodoListVueSubmission.git)
@@ -33,6 +48,7 @@ Basic knowlwedge of computers, git and an editor most prefarably visual studio c
 - Then open it VsCode by running ==> code .
 - Install the Node Modules by running: `npm install`
 - To open the application on the Browser, run the command: `npm run dev`
+- To run tests: `npm run test`
 
 ## Author
 
