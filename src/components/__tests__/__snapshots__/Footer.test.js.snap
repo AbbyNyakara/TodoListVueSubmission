@@ -1,0 +1,3 @@
+// Vitest Snapshot v1
+
+exports[`My Footer component > Renders footer component 1`] = `"<div class=\\"footer\\" data-v-4896eafd=\\"\\"><small data-v-4896eafd=\\"\\">Drag and drop to reorder list</small></div>"`;

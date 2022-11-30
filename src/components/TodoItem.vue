@@ -1,7 +1,7 @@
 <template>
   <div class="todo_item">
-      <div class="todo_label"> 
-        <input type="checkbox" v-model="completed" class="checkbox" @change="markCompleted">  
+      <div class="todo_label">
+        <input type="checkbox" v-model="completed" class="checkbox" @change="markCompleted">
         <div class="todo_item-todo" :class="{completed : completed}">{{item}}</div>
       </div>
       <div class="delete_todo" @click="deleteTodo(index)">
@@ -12,21 +12,21 @@
 
 <script>
 export default {
-  name: "TodoItem",
+  name: 'TodoItem',
   props: {
     todo: Object,
-    index: Number
+    index: Number,
   },
-  data () {
+  data() {
     return {
       item: this.todo.item,
       id: this.todo.id,
-      completed: this.todo.completed
-    }
+      completed: this.todo.completed,
+    };
   },
   methods: {
     deleteTodo(index) {
-      this.$emit('deletedTodo', index)
+      this.$emit('deletedTodo', index);
     },
     markCompleted() {
       this.$emit('markCompleted', {
@@ -34,12 +34,12 @@ export default {
         todo: {
           item: this.item,
           id: this.id,
-          completed: this.completed
-        }
-      })
-    }
-  }
-}
+          completed: this.completed,
+        },
+      });
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -48,7 +48,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 0.3px solid  hsl(233, 14%, 35%);
     cursor: pointer;
   }
 
@@ -72,8 +72,13 @@ export default {
 
   .completed {
     text-decoration: line-through;
-    color: grey;
+    color: hsl(0, 1%, 39%);
+  }
+
+  @media screen and (max-width: 500px) {
+    .todo_item {
+      font-size: 0.85rem;
+    }
   }
 
 </style>
-
