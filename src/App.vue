@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div :class="[store.mode ? 'light' : 'main']">
     <div class="app">
       <div class="app__header">
         <h1 class="app__title">Todo</h1>
@@ -55,6 +55,14 @@ export default {
     min-height: 100vh;
   }
 
+  .light {
+    background-image: url('./assets/images/bg-desktop-light.jpg'); /*toggle this*/
+    background-size: 100vw 230px;
+    background-repeat: no-repeat;
+    background-color: hsl(0, 0%, 98%);  /*toggle this*/
+    min-height: 100vh;
+  }
+
   .app__header {
     padding-top: 2rem;
     display: flex;
@@ -63,7 +71,7 @@ export default {
 
   .app__title {
     text-transform: uppercase;
-    color: #fff;  /*toggle this*/
+    color: #fff;
     letter-spacing: 10px;
     font-size: 2.3rem;
   }

@@ -72,7 +72,7 @@ export default {
 
   .completed {
     text-decoration: line-through;
-    color: grey;
+    color: hsl(0, 1%, 39%);
   }
 
   @media screen and (max-width: 500px) {

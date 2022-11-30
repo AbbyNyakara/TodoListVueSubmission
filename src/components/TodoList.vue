@@ -1,10 +1,11 @@
 <template>
   <div class="todo_list">
     <div class="input__section">
-      <input type="text" placeholder="Create a new todo" class="todo_input"
+      <input type="text" placeholder="Create a new todo"
+       :class="[store.mode ? 'todo_input-light' : 'todo_input-dark' ]"
       v-model="newTodo" @keyup.enter="addTodo">
     </div>
-    <div class="todo_items">
+    <div :class="[store.mode ? 'todo_items-light' : 'todo_items-dark']">
       <TodoItem v-for="(todo, index) in filteredTodos" :key="todo.id" class="todo_item"
        :todo="todo" :index="index" @deletedTodo="deleteTodo" @markCompleted="markCompleted">
       </TodoItem>
@@ -21,13 +22,15 @@
         </div>
 
         <div class="clear_completed">
-          <button @click="deleteCompleted" class="clear_btn" >Clear Completed</button>
+          <button @click="deleteCompleted"
+          :class="[store.mode ? 'clear_btn-light' : 'clear_btn-dark']">
+          Clear Completed</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="filter_mobile">
+  <div :class="[store.mode ? 'filter_mobile-light' : 'filter_mobile']" >
      <p :class="{ active : filter == 'all' }"  @click="filter='all'">All</p>
      <p  :class="{ active : filter == 'active' }"  @click="filter='active'">Active</p>
      <p  :class="{ active : filter == 'completed' }"  @click="filter='completed'">Completed</p>
@@ -36,6 +39,7 @@
 
 <script>
 import TodoItem from './TodoItem.vue';
+import { store } from '../store';
 
 export default {
   name: 'TodoList',
@@ -47,6 +51,7 @@ export default {
       newTodo: '',
       idForTodo: 5,
       filter: 'all',
+      store,
       todos: [
         {
           item: 'Complete online JavaScript course',
@@ -74,7 +79,7 @@ export default {
   methods: {
     addTodo() {
       if (this.newTodo.trim().length === 0) {
-        // alert('Todo Item cannot be empty');
+        alert('Todo Item cannot be empty');
         return;
       }
 
@@ -123,7 +128,7 @@ export default {
     margin-top: 2rem;
   }
 
-  .todo_input {
+  .todo_input-dark {
     padding: 20px 10px;
     width: 100%;
     font-size: 1rem;
@@ -134,12 +139,32 @@ export default {
     border-radius: 5px;
   }
 
-  .todo_items {
+  .todo_input-light {
+    padding: 20px 10px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: hsl(0, 0%, 98%);
+    border: none;
+    outline: none;
+    color: hsl(235, 19%, 35%);
+    border-radius: 5px;
+  }
+
+  .todo_items-dark {
     margin-top: 2rem;
     background-color: hsl(235, 24%, 19%);
     color: hsl(234, 39%, 85%);
     border: none;
     border-radius: 5px;
+  }
+
+  .todo_items-light {
+    margin-top: 2rem;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(235, 19%, 35%);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 2px 12px hsl(235, 19%, 35%);
   }
 
   .todo_input::before {
@@ -166,7 +191,6 @@ export default {
   .filters-desktop> p {
     cursor: pointer;
     font-size: 14px;
-    background-color: hsl(235, 24%, 19%);
     appearance: none;
     padding: 5px;
     border: none;
@@ -177,15 +201,24 @@ export default {
     color: hsl(192, 100%, 67%);
   }
 
-  .clear_btn {
+  .clear_btn-dark {
     border: none;
     outline: none;
     background: transparent;
-    color: #fff;
+    color: hsl(234, 39%, 85%);
     cursor: pointer;
   }
 
-  .filter_mobile {
+  .clear_btn-light {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: hsl(235, 19%, 35%);
+    cursor: pointer;
+  }
+
+  .filter_mobile,
+  .filter_mobile-light {
     display: none;
   }
 
@@ -203,14 +236,27 @@ export default {
       font-size: 14px;
     }
 
+    .filter_mobile-light {
+      display: flex;
+      background-color: hsl(0, 0%, 98%);
+      color: hsl(235, 19%, 35%);
+      margin-top: 1rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      box-shadow: 5px 2px 12px hsl(235, 19%, 35%);
+    }
+
     .filter_mobile> p {
     cursor: pointer;
-    /* color: hsl(234, 39%, 85%); */
     }
 
     .filters-desktop {
       display: none;
     }
   }
-
 </style>
